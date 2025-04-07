@@ -1,0 +1,145 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('@Url.Content("~/images/Pink and Purple Illustrative Computer Technology Presentation.png")') no-repeat center center fixed;
+            background-size: cover;
+            color: #f0f0f0;
+        }
+
+        .page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 5vh 5vw;
+        }
+
+        .hero-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            max-width: 90%;
+            padding: 5%;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(8px);
+        }
+
+            .hero-section h1 {
+                font-size: calc(1.5rem + 2vw);
+                font-weight: 700;
+                margin-bottom: 1rem;
+            }
+
+            .hero-section p {
+                font-size: calc(1rem + 1vw);
+                color: #ddd;
+                margin-bottom: 2rem;
+            }
+
+        .cta-button {
+            background-color: #ff5eaa;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            font-size: calc(0.8rem + 0.4vw);
+            padding: 1rem 2rem;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+            .cta-button:hover {
+                background-color: #ff3399;
+                transform: scale(1.05);
+            }
+
+        .main-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin-top: 5vh;
+            max-width: 95%;
+            width: 100%;
+        }
+
+        .text-section {
+            flex: 1 1 auto;
+            max-width: 90%;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 2rem;
+            border-radius: 2rem;
+            backdrop-filter: blur(6px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+        }
+
+            .text-section h2 {
+                font-size: calc(1.2rem + 1vw);
+                font-weight: 700;
+                margin-bottom: 0.5rem;
+            }
+
+            .text-section p {
+                font-size: calc(0.9rem + 0.4vw);
+                line-height: 1.6;
+                color: #ccc;
+            }
+
+        footer {
+            margin-top: 5vh;
+            text-align: center;
+            font-size: calc(0.8rem + 0.3vw);
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <!-- Hero -->
+        <section class="hero-section">
+            <h1>Hey, I'm Koni 👋</h1>
+            <p>Final-year IT student. Designer. Tech lover. Building beautiful experiences through code and creativity.</p>
+            <a asp-page="/Shared/Portfolio" class="cta-button">Explore My Work</a>
+
+
+        </section>
+
+        <!-- Main Content -->
+        <section class="main-section">
+            <div class="text-section">
+                <h2>Curriculum Vitae</h2>
+                <p>
+                    From late-night coding to Canva mockups at dawn—my portfolio reflects the journey of a creator in tech.
+                    <br /><br />
+                    Also, why do devs love dark mode? Because light attracts bugs. 😎
+                </p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2025 Konanani Ramabulana | All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

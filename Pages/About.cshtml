@@ -1,0 +1,135 @@
+﻿@page
+@model PrivacyModel
+@{
+    ViewData["Title"] = "About";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"]</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="~/css/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background-image: url('@Url.Content("~/images/Pink and Purple Illustrative Computer Technology Presentation.png")');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: #222;
+        }
+
+        .page {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 40px 30px;
+            gap: 50px;
+        }
+
+        .top-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            flex-wrap: wrap; /* Allows wrapping on smaller screens */
+            max-width: 1200px;
+            width: 100%;
+            text-align: center; /* Align text for smaller screens */
+        }
+
+        .text-section {
+            flex: 1;
+            max-width: 600px;
+            min-width: 300px; /* Ensures proper scaling on smaller screens */
+        }
+
+        .image-section img {
+            width: 100%;
+            max-width: 400px;
+            min-width: 250px;
+            border-radius: 20px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            object-fit: cover;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 1.7;
+            color: #444;
+        }
+
+        .fun-facts {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 16px;
+            padding: 30px;
+            max-width: 900px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+            .fun-facts h3 {
+                font-size: 22px;
+                margin-bottom: 16px;
+                font-weight: 600;
+                color: #222;
+            }
+
+            .fun-facts ul {
+                list-style-type: "✨ ";
+                padding-left: 20px;
+            }
+
+            .fun-facts li {
+                margin-bottom: 12px;
+                font-size: 16px;
+                color: #333;
+            }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="top-section">
+            <div class="text-section">
+                <h1>About Me</h1>
+                <h2>
+                    Hi, I'm Koni, and I’m currently in my final year at Varsity College, working towards a bachelor’s degree in Information Technology, specializing in Computer Application Development.
+                    <br /><br />
+                    I proudly serve as a Student Mentor and Career Services Ambassador for the Sandton Varsity College campus.
+                    <br /><br />
+                    I’m passionate about inclusivity and diversifying the tech space—especially empowering women in tech. I may not be the fastest coder, but I bring grit, curiosity, and a strong sense of purpose to every project I take on.
+                    <br /><br />
+                    Whether it’s a new collaboration, a conversation, or a mission to shake up tech—I’m here for it!
+                </h2>
+            </div>
+            <div class="image-section">
+                <img src="@Url.Content("~/images/picture2.png")" alt="Koni Ramabulana" />
+            </div>
+        </div>
+
+        <div class="fun-facts">
+            <h3>✨ Fun Facts About Me</h3>
+            <ul>
+                <li>I have 2 adorable dogs 🐶</li>
+                <li>My favorite movie is <em>Twilight</em> (Team Edward or Jacob?)</li>
+                <li>I dream of traveling to London, NYC, and Tokyo someday 🌍</li>
+                <li>I love reading fiction novels—especially romance 💕</li>
+                <li>I’m a big believer in women supporting women in tech 🤝</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

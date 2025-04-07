@@ -1,0 +1,96 @@
+﻿@page
+@model KonisCurriculimVitae.Pages.Shared.ProjectsModel
+@{
+    ViewData["Title"] = "Academic Projects";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('@Url.Content("~/images/Pink and Purple Illustrative Computer Technology Presentation.png")');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            font-family: 'Inter', sans-serif;
+            padding: 50px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 42px;
+            margin-bottom: 50px;
+        }
+
+        .projects-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .project {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            flex: 1 1 30%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            min-width: 260px;
+        }
+
+            .project img {
+                display: block;
+                margin: 0 auto 15px;
+                width: 60px;
+            }
+
+            .project h3 {
+                text-align: center;
+                font-size: 18px;
+                text-transform: uppercase;
+                margin-bottom: 15px;
+            }
+
+            .project p {
+                font-size: 14px;
+                line-height: 1.6;
+            }
+
+                .project p::before {
+                    content: "• ";
+                    color: #222;
+                }
+    </style>
+</head>
+<body>
+    <h1><strong>ACADEMIC</strong> PROJECTS</h1>
+
+    <div class="projects-container">
+        <div class="project">
+            <img src="@Url.Content("~/images/icon.png")" alt="Project Icon" />
+            <h3>Kanban Board in Java</h3>
+            <p><strong>Description:</strong> Developed a simple Kanban board using Java. This project helped me understand the basics of task management and workflow visualization.</p>
+            <p><strong>Skills Learned:</strong> Java programming, task management, and user interface design.</p>
+        </div>
+
+        <div class="project">
+            <img src="@Url.Content("~/images/icon.png")" alt="Project Icon" />
+            <h3>Desktop Application in C# and ASP.NET</h3>
+            <p><strong>Description:</strong> Created a desktop application to help independent employees claim compensation for their rates. The app allows employers to track and manage these claims effectively.</p>
+            <p><strong>Skills Learned:</strong> C# programming, ASP.NET, database management, and user experience design.</p>
+        </div>
+
+        <div class="project">
+            <img src="@Url.Content("~/images/icon.png")" alt="Project Icon" />
+            <h3>Game of Thrones Banner Quiz in Java</h3>
+            <p><strong>Description:</strong> Developed a Game of Thrones themed game that produces a personalized banner based on user responses to a questionnaire.</p>
+            <p><strong>Skills Learned:</strong> Java programming, game development, and interactive user interfaces.</p>
+        </div>
+    </div>
+</body>
+</html>

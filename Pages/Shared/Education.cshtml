@@ -1,0 +1,81 @@
+﻿@page
+@model KonisCurriculimVitae.Pages.Shared.EducationModel
+@{
+    ViewData["Title"] = "Education";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/styles.css" />
+    <style>
+        body {
+            background-image: url('@Url.Content("~/images/Pink and Purple Illustrative Computer Technology Presentation.png")');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            font-family: 'Inter', sans-serif;
+        }
+        .page main{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 10px;
+        }
+
+        .text-section {
+            max-width: 50%; /* Adjust for more balance */
+            text-align: left;
+            padding-left: 15px; /* Adds spacing from the edge */
+        }
+
+        .image-section img {
+            max-width: 1200px; /* Larger illustration */
+            flex-grow: 1; /* Ensures the image takes up available space */
+            height: auto;
+        }
+
+        h1 {
+            font-size: 65px;
+            font-weight: bold;
+        }
+
+        h2 {
+            font-size: 45px;
+        }
+
+        p {
+            font-size: 15px; /* Improved readability */
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <main>
+            <div class="text-section">
+                <h1><strong>Tertiary & Secondary</strong></h1>
+                <h2>EDUCATION</h2>
+                <p>
+                    Currently in my final year of a Bachelor of Information Technology in 
+                    Computer Application Development at Varsity College.My studies
+                    have provided me with a strong foundation in software 
+                    development, data analytics, and cloud computing.But my coding 
+                    didn’t begin in college, it began in Parktown High School where my grade 
+                    was the first cohort of girls to take IT as a subject in grade 10.
+                    There I was introduced to programming; I learnt perseverance in 
+                    that class because I didn’t grasp programming as quickly as my 
+                    peers did but that didn’t stop me.I then went on to take IT in 
+                    college, but I still struggled and now I’m here.Three years later, in my 
+                    final year, and finishing my degree in record time!
+                </p>
+            </div>
+            <div class="image-section">
+                <img src="@Url.Content("~/images/disks-removebg-preview.png")" alt="Computer Illustration" />
+            </div>
+        </main>
+    </div>
+</body>
+</html>
